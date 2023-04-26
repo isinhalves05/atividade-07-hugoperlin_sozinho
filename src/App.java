@@ -1,11 +1,10 @@
-package ifpr.pgua.eic.info.atividade07;
-
 import java.util.Scanner;
 
 public class App {
 
     static Scanner teclado = new Scanner(System.in);
     static ContaBancaria conta;
+    static Banco banco = new Banco("IFBank");
 
     static String imprimirMenu(){
         String str="";
@@ -14,6 +13,8 @@ public class App {
         str += "2 - Sacar\n";
         str += "3 - Depositar\n";
         str += "4 - Ver dados\n";
+        str += "5 - Cadastrar Cliente\n";
+        str = str + "6 - Listar Clientes\n";
         str += "0 - Sair\n";
         str += "Digite uma opção:";
 
@@ -39,8 +40,6 @@ public class App {
         conta = new ContaBancaria(agencia,numero,nomeCliente);
 
         System.out.println("************");
-        
-
 
     }
 
@@ -70,6 +69,30 @@ public class App {
         System.out.println("************");
     }
 
+    static void cadastrarCliente(){
+        String nome;
+        String cpf;
+        int idade;
+        double salario;
+
+        System.out.println("Digite o nome do cliente:");
+        nome = teclado.nextLine();
+        System.out.println("Digite o cpf do cliente:");
+        cpf = teclado.nextLine();
+        System.out.println("Digite a idade do cliente:");
+        idade = teclado.nextInt();
+        System.out.println("Digite o salário do cliente R$:");
+        salario = teclado.nextDouble();
+
+        System.out.println(banco.cadastrarCliente(nome, cpf, idade, salario));
+    }
+
+    static void relatorioClientes(){
+        System.out.println("####Relatório Clientes####");
+        System.out.println(banco.gerarRelatorioClientes());
+        System.out.println("######");
+    }
+
     public static void main(String[] args) {
 
         int opcao=0;
@@ -92,6 +115,12 @@ public class App {
                 break;
                 case 4:
                     mostrarDados();
+                break;
+                case 5:
+                    cadastrarCliente();
+                break;
+                case 6:
+                    relatorioClientes();
                 break;
                 default:
                     if(opcao != 0){

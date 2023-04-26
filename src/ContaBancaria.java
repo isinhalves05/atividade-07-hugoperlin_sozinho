@@ -3,26 +3,26 @@ public class ContaBancaria {
     // atributos
     private String numero;
     private String agencia;
-    private String nomeCliente;
+    private Pessoa cliente;
     private double saldo;
 
 
     public ContaBancaria(String numero, 
                          String agencia, 
-                         String nomeCliente, 
+                         Pessoa cliente, 
                          double saldo){
         System.out.println("Chamou contrutor completo...");
         this.numero = numero;
         this.agencia = agencia;
-        this.nomeCliente = nomeCliente;
+        this.cliente = cliente;
         this.saldo = saldo;
     }
 
     public ContaBancaria(String numero, 
                          String agencia, 
-                         String nomeCliente){
+                         Pessoa cliente){
         
-        this(numero,agencia,nomeCliente,0.0);
+        this(numero,agencia,cliente,0.0);
         /*this.numero = numero;
         this.agencia = agencia;
         this.nomeCliente = nomeCliente;
@@ -41,14 +41,7 @@ public class ContaBancaria {
         agencia = novoValor;
     }
 
-    public void setNomeCliente(String novoValor){
-        nomeCliente = novoValor;
-    }
 
-    /*
-    public void setSaldo(double novoValor){
-        saldo = novoValor;
-    }*/
 
     public String getAgencia(){
         return agencia;
@@ -58,8 +51,8 @@ public class ContaBancaria {
         return numero;
     }
 
-    public String getNomeCliente(){
-        return nomeCliente;
+    public Pessoa getCliente(){
+        return cliente;
     }
 
     public double getSaldo(){
@@ -95,7 +88,7 @@ public class ContaBancaria {
 
         str = "\nAgência: " + agencia +
                 "\n Número: " + numero +
-                "\n Cliente: " + nomeCliente +
+                "\n Cliente: " + cliente.getNome() +
                 "\n Saldo R$:" + saldo;
 
         return str;
