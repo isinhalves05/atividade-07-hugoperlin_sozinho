@@ -12,6 +12,28 @@ public class Banco{
         clientes = new ArrayList<>(); //criando o ArrayList
     }
 
+
+    public String cadastrarConta(String numero, String agencia, Pessoa cliente){
+        return null;
+    }
+
+    public ContaBancaria buscarConta(String numero, String agencia){
+        return null;
+    }
+
+    public String sacar(String numero, String agencia, double valor){
+        return null;
+    }
+
+    public String depositar(String numero, String agencia, double valor){
+        return null;
+    }
+
+    public String gerarRelatorioContas(){
+        return null;
+    }
+
+
     public String cadastrarCliente(String nome, String cpf, 
                             int idade, double salario){
         
