@@ -24,20 +24,23 @@ public class App {
 
     static void criarConta(){
         
-        String nomeCliente;
+        //String nomeCliente; cpf
         String numero;
         String agencia;
         double saldoInicial;
         
-        System.out.println("Digite o nome do cliente:");
-        nomeCliente = teclado.nextLine();
+        System.out.println("Digite o nome do cpf:");
+        cpf = teclado.nextLine();
         System.out.println("Digite o número da conta:");
         numero = teclado.nextLine();
         System.out.println("Digite a agência da conta:");
         agencia = teclado.nextLine();
+        
+        //buscar cliente por cpf no banco
+        //se o cliente existir, criar conta, passando o cliente encontrado
+        //para a conta bancária
 
-
-        conta = new ContaBancaria(agencia,numero,nomeCliente);
+        //conta = new ContaBancaria(agencia,numero,nomeCliente);
 
         System.out.println("************");
 
