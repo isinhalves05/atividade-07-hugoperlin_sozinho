@@ -41,22 +41,10 @@ public class ContaBancaria {
         agencia = novoValor;
     }
 
-
-
-    public String getAgencia(){
-        return agencia;
-    }
-
-    public String getNumero(){
-        return numero;
-    }
-
     public Pessoa getCliente(){
         return cliente;
     }
-
-    public double getSaldo(){
-        return saldo;
+    public void getSaldo(String string) {
     }
 
     // metodos

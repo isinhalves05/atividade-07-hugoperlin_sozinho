@@ -24,9 +24,9 @@ public class App {
 
     static void criarConta(){
         
-        //String nomeCliente; cpf
         String numero;
         String agencia;
+        String cpf;
         double saldoInicial;
         
         System.out.println("Digite o nome do cpf:");
